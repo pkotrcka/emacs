@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Only Page</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">The Only Page</h1>
+<div id="outline-container-org5ff38ae" class="outline-2">
+<h2 id="org5ff38ae"><b>Intro</b></h2>
+<div class="outline-text-2" id="text-org5ff38ae">
+<p>
+This is a minimalist page, so be sure that you are using a browser that is also minimalist enough :-D
+  Happy viewing. Written in Emacs, BTW
+</p>
+
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org5ff38ae"><b>Intro</b></a></li>
+<li><a href="#org57d84d2"><b>FEATURES</b></a></li>
+<li><a href="#org408e292"><b>What I like, do and stuff</b></a></li>
+<li><a href="#org7c74e1e"><b>Photography</b></a></li>
+<li><a href="#orgfe0cb55"><b>Computer Stuff</b></a>
+<ul>
+<li><a href="#org4f9f2f1"><b>Emacs</b></a></li>
+<li><a href="#org0ab0046"><b><del>Lenovo</del> IBM Plex</b></a></li>
+</ul>
+</li>
+<li><a href="#org5b0ac91"><b>Kurrent</b></a>
+<ul>
+<li><a href="#orge98b307"><b>What is Kurrent?</b></a></li>
+<li><a href="#org46745af"><b>Why Kurrent?</b></a></li>
+<li><a href="#orge94acee"><b>How Kurrent?</b></a></li>
+<li><a href="#org43e15c9"><b>Conclusion</b></a></li>
+<li><a href="#org27da7b8"><b>Resources</b></a></li>
+</ul>
+</li>
+<li><a href="#orgced1520"><b>German language</b></a>
+<ul>
+<li><a href="#org3da7f9b"><b>Auf Deutsch</b></a></li>
+</ul>
+</li>
+<li><a href="#org090739b"><b>Random notes from my life</b></a>
+<ul>
+<li><a href="#org39a38cb"><b>2021</b></a></li>
+<li><a href="#org8496e25"><b>2022</b></a></li>
+<li><a href="#org88a9547"><b>2023</b></a></li>
+</ul>
+</li>
+<li><a href="#org4eeef2c"><b>Contacts</b></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org57d84d2" class="outline-2">
+<h2 id="org57d84d2"><b>FEATURES</b></h2>
+<div class="outline-text-2" id="text-org57d84d2">
+<p>
+This page can be viewed:
+</p>
+
+<ul class="org-ul">
+<li>without javascript enabled, there is none</li>
+<li>without image support</li>
+<li>with any font you like, it should not break the page beyond legibility</li>
+<li>even on a dumbphone (but you know that from these previous points, right?)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org408e292" class="outline-2">
+<h2 id="org408e292"><b>What I like, do and stuff</b></h2>
+<div class="outline-text-2" id="text-org408e292">
+<ul class="org-ul">
+<li>Born in Slovakia, 1984, currently living in Prague, CZ</li>
+<li>I like computers, hamradio, fountain pens, open source</li>
+<li>Working as a technical support for an adult entertainment website</li>
+<li>Emacs Enthusiast (more about that lower)</li>
+<li>Using <del>openSuse</del> and <del>Fedora</del> wherever I can, BSDs even where I can't - UPDATE: I somehow lean towards Ubuntu more and more.</li>
+<li>GNU Guix fan, but noobie</li>
+<li>orgmode user, wrote the whole page here</li>
+<li>name is obviously "Peter Kotrčka" :-D</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org7c74e1e" class="outline-2">
+<h2 id="org7c74e1e"><b>Photography</b></h2>
+<div class="outline-text-2" id="text-org7c74e1e">
+<p>
+I am not the greatest photographer in the world, but it is one of my passions.
+Mostly I am using my phone, like every sane person on this planet maybe, but film photography is one of my "offline" hobbies.
+When I revisited my camera collection just a few days ago, I have found that currently I am a rangefinder exclusive photographer (in 35 mm format).
+</p>
+
+<p>
+Here is a list of cameras I own:
+</p>
+
+<ul class="org-ul">
+<li>unspecified number of Kiev 4 cameras (most likely 3 pieces, if there is no other hidden somewhere) + some Jupiter 8 lenses</li>
+
+<li>Leotax -f-</li>
+
+<li>Canon 7, unknown model, I do not use that one as much as I would love to because of a pretty dull and hazy rangefinder patch</li>
+
+<li>Voigtländer Bessa L</li>
+
+<li>Zorki 4</li>
+</ul>
+
+<p>
+Also, I have a TLR, Yashica D (the one with 3,5 lens), a lovely but not really compact camera and then an unspecified Zeiss Ikon folding camera from 1930's.
+</p>
+
+<p>
+Every single camera is in working order (more or less), I got rid of my non working cameras and still have plenty of machines to use.
+</p>
+
+<p>
+As for lenses, a bunch of soviel L39 (Leica screw mount) lenses like Jupiter, Industar, the obvious and commonly available stuff.
+</p>
+
+<p>
+This article will have an update, I just need to think about what and how I would like to share more details about these cameras.
+Because, it would probably be more beneficial for you to see them and / or to see the output (images).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfe0cb55" class="outline-2">
+<h2 id="orgfe0cb55"><b>Computer Stuff</b></h2>
+<div class="outline-text-2" id="text-orgfe0cb55">
+</div>
+<div id="outline-container-org4f9f2f1" class="outline-3">
+<h3 id="org4f9f2f1"><b>Emacs</b></h3>
+<div class="outline-text-3" id="text-org4f9f2f1">
+</div>
+<div id="outline-container-orgc8ba8ab" class="outline-4">
+<h4 id="orgc8ba8ab"><b>Why?</b></h4>
+<div class="outline-text-4" id="text-orgc8ba8ab">
+<p>
+I was a fan of simply solutions for a quite long time. So why would I change that for Emacs?
+Well, as many emacs haters will tell you, Emacs is more of an operating system rathern than
+text editor. Which is correct, if you do nto have any multmedia ambitions on your computer,
+you can do almost everything inside Emacs. It has a huge advantage, usually the same keyboard
+shortcuts (bindings) for every "program" inside Emacs. It is the same as for vim users when
+they are so so so so much happy about vim key bindings in various terminal programs like
+ranger, &#x2026;
+</p>
+
+<p>
+This is just the beginning of my path, I am only using a few things inside Emacs because
+it is very easy to get overwhelmed by so many possibilities. And I would like to do it slightly
+different this time, take smaller chunks and go deeper rather than cover everything at once
+and nothing well or deep enough. So my first steps are:
+</p>
+
+<ul class="org-ul">
+<li>work inside every buffer efficiently, know my key bindings</li>
+
+<li>setup a few, most used packages and practise by really using them (elfeed, mastodon, dired)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0a54915" class="outline-4">
+<h4 id="org0a54915"><b>Vanilla?</b></h4>
+<div class="outline-text-4" id="text-org0a54915">
+<p>
+Yes, I'm using a vanilla Emacs, no vim key bindings no distributions. I mean, there's nothing
+wrong with using Emacs distributions, especially when you want to see what is possible to do
+inside Emacs, but a lot of them are just packing a looooot of stuff for programming, so many
+different packages. And I have found that I can do a lot of things even without these packages
+just because Emacs does everything right :-D Please repeat, Emacs does everything right.
+</p>
+
+<p>
+But if I would have to recommend a package, it would be a "vanilla Emacs keybindings" one
+like Prelude or Centaur (use <a href="https://lite.qwant.com">search engine</a> to find out more), those seem like well themed,
+curated and actively developed Emacs distros.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0e54dfc" class="outline-4">
+<h4 id="org0e54dfc"><b>Theming</b></h4>
+<div class="outline-text-4" id="text-org0e54dfc">
+<p>
+Oh yes, this is important, you need to have a beautiful theme to be able to promote your stuff on
+#emacsporn or #unixporn on reddit, right? Oh yes you need. So, as you can find later on this page,
+there is a link to a cool greek guy who created a light and dark theme, from which I am using
+the light one during the day. Otherwise, just select the "Wombat" one, it is preinstalled and
+you will be as happy as I am.
+</p>
+
+<p>
+OK, for now, "Leuven" (light theme) it is
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgaa807a4" class="outline-4">
+<h4 id="orgaa807a4"><b>I need more info, now</b></h4>
+<div class="outline-text-4" id="text-orgaa807a4">
+<p>
+OK, if this is not enough, visit:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://protesilaos.com">Protesilaos Stavrou</a> and his page, youtube channel, etc.</li>
+<li>System Crafters (again, use search engine to find out the youtube channel)</li>
+<li><a href="https://sachachua.com">Sacha Chua</a> website for weekly news and other sources</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org0ab0046" class="outline-3">
+<h3 id="org0ab0046"><b><del>Lenovo</del> IBM Plex</b></h3>
+<div class="outline-text-3" id="text-org0ab0046">
+<p>
+I like to use <del>Lenovo</del> IBM Plex font wherever I can. You can find it in your repo (OpenBSD has it, NetBSD has it, Debian has it, for the rest - use your favourite.. no, use this search engine - <a href="https://metager.org">click</a> to find and download it).
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org5b0ac91" class="outline-2">
+<h2 id="org5b0ac91"><b>Kurrent</b></h2>
+<div class="outline-text-2" id="text-org5b0ac91">
+</div>
+<div id="outline-container-orge98b307" class="outline-3">
+<h3 id="orge98b307"><b>What is Kurrent?</b></h3>
+<div class="outline-text-3" id="text-orge98b307">
+<p>
+Kurrent is an old german handwritten script, used primarily prior 1940s when it was banned by the Nazi government. There are multiple variants of this script, the most modern one called Sütterlin.
+There are some slight differences between these variants, however - once you know one of these variants, it is a matter of minutes to pick up those 3-4 characters written in some different way.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org46745af" class="outline-3">
+<h3 id="org46745af"><b>Why Kurrent?</b></h3>
+<div class="outline-text-3" id="text-org46745af">
+<p>
+Well, that's a good question. There are not that many use cases, especially when you are an enaglish language native speaker and / or don't know that much of a German. Of course, there are a plenty of materials written in other languages by using this script, but still - tha majority of it is in German.
+For me, it is a good way how to motivete myself to actually learn a bit more German and also to practise handwriting, since I'am also a fountain pen fan. Some of my penfriends are from Germany and (actually to all of them) I'm writing letters to them in Kurrent. In english, so far, but still, at least something, step by step.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge94acee" class="outline-3">
+<h3 id="orge94acee"><b>How Kurrent?</b></h3>
+<div class="outline-text-3" id="text-orge94acee">
+<p>
+There are many materials online on how to learn to write and read Kurrent, a lot of scans of older cookbooks, letters, postcards - so if you are interested, just Metager (or Google, if you must) "kurrent" and you are good to go, learning materials will be on top of your search results. There are also some Facebook groups dedicated to Kurrent / Sütterlin and people there are really welcoming, even if you don't speak German.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org43e15c9" class="outline-3">
+<h3 id="org43e15c9"><b>Conclusion</b></h3>
+<div class="outline-text-3" id="text-org43e15c9">
+<p>
+Kurrent is my only other (than Latin) script I know, so it is maybe a bit too early to say this, but I like it very much. It slows me down, I can enjoy writing in it a bit more, it opens new gates to german language, german culture, german history. And actually, learning it was an easy process, just a matter of a day or two. Practising Kurrent handwriting is a never ending process, but still, very enjoyable.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org27da7b8" class="outline-3">
+<h3 id="org27da7b8"><b>Resources</b></h3>
+<div class="outline-text-3" id="text-org27da7b8">
+<p>
+<a href="http://www.kurrent-lernen-muecke.de/">Margarete Mücke Kurrent Seite</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=1AgE_4P0cSs">Kurrent writing course - Youtube video (3 hrs)</a>
+</p>
+
+<p>
+&#x2026; more will be added later
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgced1520" class="outline-2">
+<h2 id="orgced1520"><b>German language</b></h2>
+<div class="outline-text-2" id="text-orgced1520">
+<p>
+My kryptonite. I wasn't able to learn this language or progress further than to the level where I can watch a youtube video of some kind of an
+influencer and get an idea what it is all about. Which, lets be honest, is not a very high level, right? I wanted to improve my language
+skilly by using german in my letters to penfriends (in combination with Kurrent), but it is not enough. If you are reading this page and
+also if you are learning german, let me know what could help. Duolingo is not working for me either.
+</p>
+
+<p>
+December 2022 update: not much of a change, but I feel like I understand a little bit more, even IRL in Germany. 
+</p>
+</div>
+
+<div id="outline-container-org3da7f9b" class="outline-3">
+<h3 id="org3da7f9b"><b>Auf Deutsch</b></h3>
+<div class="outline-text-3" id="text-org3da7f9b">
+<p>
+Hallo, mein name ist Peter und ich schreibe diesen bereich meiner Website in deutscher Sprache. Oder in einer Sprache, die dem Deutschen irgendwie ähnelt.
+Die deutsche Sprache is mein Kryptonit, merh also "Hallo" sagen kann ich nicht lernen. Hilfe, bitte :-(
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org090739b" class="outline-2">
+<h2 id="org090739b"><b>Random notes from my life</b></h2>
+<div class="outline-text-2" id="text-org090739b">
+</div>
+<div id="outline-container-org39a38cb" class="outline-3">
+<h3 id="org39a38cb"><b>2021</b></h3>
+<div class="outline-text-3" id="text-org39a38cb">
+<p>
+<b>*</b> <b>May 9</b> - edited <a href="http://pkotrcka.inlisp.org/emacs.html">emacs.html</a> page as a practise in editing inside Emacs. I also updated
+my RSS feed sources, got rid of reddit junk (or at least the most of it) and put some lower
+traffic, but interested sources
+</p>
+
+<p>
+<b>*</b> <b>May 9</b> - making a short video about my workflow in #Emacs. And as usual, I can nto type when I
+also record my video :D This is a document made in <b>org</b> which will be exported to HTML and uploaded to my
+FTP. Nothing fancy, nothing special, maybe I will add a link to something like Alex's blog. Alex Schroeder is
+another Emacs enthusiast, so why not? Here it is: <a href="https://alexschroeder.ch">Alex's page</a> 
+</p>
+
+<p>
+OK, now I have to find a way how to use ffmpeg and make this video faster (speed up). So we will use eww, of
+course :D Maybe I have found it, it shoult work like this:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">ffmpeg -i input.mkv -filter:v "setpts=0.5*PTS" output.mkv
+</pre>
+</div>
+
+
+<p>
+Hmmm, should I put the code into the code section? Let's see if I could use org mode help here.
+I was able to do that, nice :-D And now, export the document and upload it onto FTP.
+</p>
+</div>
+
+<div id="outline-container-org0d68282" class="outline-4">
+<h4 id="org0d68282"><b>June 5</b></h4>
+<div class="outline-text-4" id="text-org0d68282">
+<p>
+On my path to find a better web browser, I am back on Vivaldi. As you may already know, I have a few computers, some of them are powerful enough not to show off the lack of speed when using Firefox.
+</p>
+
+<p>
+But I also have a underpowered UMAX laptop which shows this pretty happily. So my quest was, to find if there is a greener grass on the Chromium part of the garden. And it seems there is.
+</p>
+
+<p>
+I used Vivaldi and yes yes yes, there is a significant speed increase. Probably it will be worse with RAM usage, but that I can live with.
+</p>
+
+<p>
+I know that my ideal web browser would be Iridium, however - those german guys are not that regular with updates, also there are multiple versions for different Linux branches / distributions and each one of them is based on a different version.
+</p>
+
+<p>
+Not to mention unresolved dependencies on my current distro. Yes yes, it is open source, I can bouild it - but can you imagine building it on this kind of laptop? :-D
+</p>
+</div>
+</div>
+
+<div id="outline-container-org10ae8fd" class="outline-4">
+<h4 id="org10ae8fd"><b>July 4</b></h4>
+<div class="outline-text-4" id="text-org10ae8fd">
+<p>
+Not a Independence day themed post.
+</p>
+
+<p>
+However, still something to celebrate. I have a new computer, I decided to go for a secondary laptop since I will spend a lot of time at the office during the night.
+</p>
+
+<p>
+And I miss having an UNIX system available with everything ready and installed for my needs. Of course, there is SDF, but still, own HW is own HW.
+</p>
+
+<p>
+There was a small and unexpected surprise when I bought a laptop that was my first choice. ASUS ExpertBook, 14", no Windows, yes RJ-45, FullHD display, good price. However, 
+I like to use Emacs as my editor of choice (and for other things as well) and guess what. I was so lucky with my first laptop (HP x360) where keyboard rollover was functioning as
+expected, that I was not expecting it to be different on any other laptop. But it is. And not like "ASUS has it, HP not", it is different, model after model. It might look similar but the
+keyboard behaves completely different. So, it went back and I spent my sunday afternoon by trying (lucky for me, I was able to test this) laptops that are within my budget, have a 
+decent keyboard with working rollover, have non-qualcomm wifi, etc. And tadaaaa, the winner is ASUS again, something with tiger lake i5 (I would like to try an AMD laptop, but those are
+still rare), 8 GB of RAM, some SSD inside. And I like it. maybe even a bit more than my HP, so I am not really sure which one will accompany me at the office. I wanted to leave the 
+better machine at home, but now it might be this ASUS (yes, I already installed #emacs and typing this on this laptop).
+</p>
+
+<p>
+Fedora works there like a charm - again, maybe even better than the HP with a slightly older chipset. I was a bit worried about the smaller touchpad but it is a good one, so
+no problems here.
+</p>
+
+<p>
+I will update :-)
+</p>
+
+<p>
+<b>July 30</b>
+</p>
+
+<p>
+On my other laptop that I left at work I installed the latest devel version of Ubuntu, Impish Indri. It was my only chance since I only have had one USB drive with me. 
+So if that would not work, I would be screwed. But it worked. It has its own flaws, of course, it is still 3 months away from release, but it works. And what I need?
+Simple, Emacs, Vivaldi (yeah, will explain later), some video player and a system base taht will not crash just like that. And for that, Ubuntu devel in the middle of the
+development cycle is more than enough.
+</p>
+
+<p>
+This, of course, was written on that very system :-D
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf6a1fa1" class="outline-4">
+<h4 id="orgf6a1fa1"><b>August 1</b></h4>
+<div class="outline-text-4" id="text-orgf6a1fa1">
+<p>
+For the first two weeks, my new ASUS laptop was more of a testing platfomr, I always like to try what is possible, what works and what does not.
+What a surprise was that I have found Ubuntu is not possible to install (at least not by deafult) because it can not see the internal drive.
+That's 21.04, of course, but I am not a lazy guy so I tested a release that will become 21.10 one day and all fo the sudden, it sees the drive and works correctly.
+Not sure what happened, maybe a kernel version bump (5.11 in stable, 5.13 in the future release), maybe something else. But everything works.
+</p>
+
+<p>
+So far so good - Fedora works, Ubuntu (will) works, openSuse Tumbleweed works. Manjaro works, but&#x2026; Yes, there is still some but(t), it has other issues, which are
+probably not HW related.
+</p>
+
+<p>
+Hey, maybe you would like to actually know what laptop it is - so the model name is Asus X415EA-EB037T (probably a local variant, but in any case - Tiger Lake i5 CPU,
+8/256 RAM/storage). I know that it is not a super expensive laptop, but I really like it. I know, I know, you will tell me that the display is terrible (yes, there are 
+slight light leaks here and there when the backlight is turned high), the keyboard is terrible (it is not, I Like typing on it and it even has T shaped arrow keys layout 
+(but yes, still half height, but at least something). Sound is OK, I can not really comapre it to the HP which has front facing speakers above keyboard, but at least the 
+sound output into headphones is very decent.
+</p>
+
+<p>
+I am not sure about the battery life, all of my laptops are actually more of a desktop replacement with a tiny footprint :-D so&#x2026; But, I would guess 5+ hours with
+an average load, amybe a bit more with "content consuming". What I Like, on the other hand is the fact that it is quiet, yet still cool. My HP crank up fans very quickly 
+when there is a CPU load and it is pretty loud. ASUS keeps it quiet for a much much longer time.
+</p>
+
+<p>
+So overall, I am happy, I typed a lot of text on this laptop, listened to a good music, watched some videos, everything works as expected. I know that it is a bit too
+early for recommendation, but so far, so good.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8496e25" class="outline-3">
+<h3 id="org8496e25"><b>2022</b></h3>
+<div class="outline-text-3" id="text-org8496e25">
+</div>
+<div id="outline-container-orgbe50d61" class="outline-4">
+<h4 id="orgbe50d61"><b>February 5, 2022</b></h4>
+<div class="outline-text-4" id="text-orgbe50d61">
+<p>
+New Year, new adventures. So, what am I going to do this year?
+</p>
+
+<p>
+A few resolutions like less coffee, more quality coffee, less GAS (gear acquisition syndrome) and impulse purchases. That's normal and I will probably break those within a few months.
+</p>
+
+<p>
+Then, I would like to get my german into the "conversational" level, more than just the "hardly able to say hello" level I am stuck on for years.
+</p>
+
+<p>
+Also, I would love to learn something useful on computers. Programming always fascinated me and it would not be that hard to learn (I think) but I also know, what is probably the biggest issue.
+I do not have any project I could do long term that would grow with me, has a meaning, &#x2026;
+Os instead of that, I could just try to learn to script, shell script. That is something I could then use on a daily basis. This needs more thinking and you'll be updated.
+</p>
+
+<p>
+Of course, less social media.. right?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfbcc3bd" class="outline-4">
+<h4 id="orgfbcc3bd"><b>April 24</b></h4>
+<div class="outline-text-4" id="text-orgfbcc3bd">
+<p>
+Somehow, all that war and everything got me, 2 months after the start. Two years of COVID and now this. Poor people in Ukraine, prices of everything skyrocketed, Russia is still an idiocracy.
+That's not good, not good at all. What I' mtrying now is taht I will avoid news sites, if that helps my mood a bit. I will also start night shifts again, so I'll try to focus on programming and
+learning some new computer stuff.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org17a7a3d" class="outline-4">
+<h4 id="org17a7a3d"><b>May 11</b></h4>
+<div class="outline-text-4" id="text-org17a7a3d">
+<p>
+Updated my <a href="http://pkotrcka.inlisp.org/index.html">main page</a> to include almost everything that is possible to put on one page, the only exception is this notepad. And I like it, it is really readable even on a phone. It's not for people that like
+videos or such, but rather for someone who likes to read a little bit. I will add even more stuff later in the late 90s fashion - html in its best :-D 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5b08d99" class="outline-4">
+<h4 id="org5b08d99"><b>May 13</b></h4>
+<div class="outline-text-4" id="text-org5b08d99">
+<p>
+Removed the "What I do not like" section, started to type about NetBSD and also added somwthing about german language. We are getting there.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbd9e781" class="outline-4">
+<h4 id="orgbd9e781"><b>May 14</b></h4>
+<div class="outline-text-4" id="text-orgbd9e781">
+<p>
+I have created a new Youtube channel for my adventures with computers. As an Emacs user
+I have selected a name that is very appropriate - AmateurVimer :-D Content is really
+easy to create and it seems to be fun. Will see how I will feel about it later on.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcb7cf3a" class="outline-4">
+<h4 id="orgcb7cf3a"><b>June 1</b></h4>
+<div class="outline-text-4" id="text-orgcb7cf3a">
+<p>
+A lot has happened. I deleted this page, started to create a new one, also changed my mastodon instance.
+Then I have found this copy of the page on my laptop so re-decided to edit this stuff and give it another try.
+My roommate will leave, that means much more space in the apartment but also a higher rent :-(
+I am so much behind my penpals letter writing, I <b>have to</b> do something about it.
+It's been three months since I wrote an article about the laptop I'm using right now and it hasn't been published yet.
+I wonder if it ever gets published.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24f3dcd" class="outline-4">
+<h4 id="org24f3dcd"><b>August 24</b></h4>
+<div class="outline-text-4" id="text-org24f3dcd">
+<p>
+Nothing much has happened, I was on my holiday in Germany. It was nice, I will miss that.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4cc8f4e" class="outline-4">
+<h4 id="org4cc8f4e"><b>December 10</b></h4>
+<div class="outline-text-4" id="text-org4cc8f4e">
+<p>
+I have restarted my phlog on gopher. Not sure how that will end, that's a problem of the future Peter :-D Also, I am doing our social media in the company partially again.
+I won't lie, it is partially about the money, but most of it, maybe 70% - I need to do something else than my regular job just to be able to stay in this company.
+And I'm waiting for something to come up that will be a new challenge for me, something creative (which, to be honest, this social media is NOT). We'll see what it'll become.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org88a9547" class="outline-3">
+<h3 id="org88a9547"><b>2023</b></h3>
+<div class="outline-text-3" id="text-org88a9547">
+</div>
+<div id="outline-container-org11fae13" class="outline-4">
+<h4 id="org11fae13"><b>January 3</b></h4>
+<div class="outline-text-4" id="text-org11fae13">
+<p>
+Happy New Year everyone, I actually remembered to update this page early on, so.. New Year resolutions? More Emacs for me, maybe some scripting and someone on Mastodon told me to
+look into LaTeX, so.. If I'm going to publish my silly beer and coffee newspapers for my colleagues, that could be useful.
+And of course, eatl more healthy, less sugar, less garbage food, &#x2026;
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbd5e7ef" class="outline-4">
+<h4 id="orgbd5e7ef"><b>January 7</b></h4>
+<div class="outline-text-4" id="text-orgbd5e7ef">
+<p>
+I have updated the Programming section, added some resolutions for 2023 there. Installed Fedora Rawhide on my spare work laptop, we'll see how it'll hold up.
+I wanted to record a second episode of my beer podcast, to have at least a few episodes before I will star a channel or podcast itself but Audacity froze the whole computer.
+Not sure, how, don't ask me, but it stopped after 7 minutes and nothing was saved. Honestly, it wasn't my best attempt anyway, but.. still, so much time wasted.
+I bought a train ticket to Germany, Freiberg. You probably do not know the city, it is among smaller ones, but there is a brewery with probably the best Kellerbier I have ever tried.
+It is possible to buy that beer in Dresden as well, but.. I want to see if the place of origin is the best place to drink such a special beer.
+And I like trains, this will be another trip with Deutsche Bahn (from Dresden to Freiberg) and České dráhy (Prague -&gt; Dresden). I am thinking about creating a dedicated train photo
+Instagram account. I love trains, so why now? I know there are dedicated Mastodon instances for train enthusiasts as well, but IG should be a starting point. And from there, we'll see.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8969841" class="outline-4">
+<h4 id="org8969841"><b>January 31</b></h4>
+<div class="outline-text-4" id="text-org8969841">
+<p>
+It was a pretty decent January. I was on a few trips, Germany again, of course. A lot of good beer, a lot of nice experiences. Not something I need to elaborate too much,
+but yeah - a decent January. Now I am back on night shifts, so maybe the February will be more about learning new stuff. Still not sure what that will be. But I'll update you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf4987a0" class="outline-4">
+<h4 id="orgf4987a0"><b>February 4</b></h4>
+<div class="outline-text-4" id="text-orgf4987a0">
+<p>
+Pissed that my ISP / mobile services provider screwed my bill again, I have to go there AGAIN and describe all about my discounts and everything.
+Plus, they have increased prices by 9%, so I am thinking about saying goodbye to them. There are other options available. Maybe a little bit less comfortable, but still.
+As for this page, I removed a lot of stuff that is not relevant anymore, to clean the page a bit. I think you won't miss them, it was just a bloat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga383289" class="outline-4">
+<h4 id="orga383289"><b>February 20</b></h4>
+<div class="outline-text-4" id="text-orga383289">
+<p>
+Updates: deleted my Google account completely, switched to Huawei phone (no need of Google account there), FEB-21 will be my mobile services provider switch.
+Moved to neocities because for some reason, sdf revoked my ftp access.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4eeef2c" class="outline-2">
+<h2 id="org4eeef2c"><b>Contacts</b></h2>
+<div class="outline-text-2" id="text-org4eeef2c">
+<p>
+Electronic mail: pkotrcka (at) vivaldi (dot) net
+</p>
+
+<p>
+Mastodon: @peterkotrcka@nrw.social
+</p>
+
+<p>
+<b>Modified - February 20, 2023</b> - last mod: Contacts + blog
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>
