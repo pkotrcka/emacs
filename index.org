@@ -339,10 +339,21 @@ As for this page, I removed a lot of stuff that is not relevant anymore, to clea
 Updates: deleted my Google account completely, switched to Huawei phone (no need of Google account there), FEB-21 will be my mobile services provider switch.
 Moved to neocities because for some reason, sdf revoked my ftp access.
 
+*** *February 25*
+
+Mobile services provides changed successfully. For some reason, I am unable to access FTP on SDF so I neede to change my webhosting.
+Sadly, the most convenient service that allows hosting my html as well as org files is github. So I have a website there :-(
+I am not happy about it, but that's the way it is for now. BTW, I already have a follower on guthub. Not sure who and why. Mostly why.
+On Sunday, February 26, I will go for a beer degustation again. We need (me and my colleague) to try some new beers and have a discussion
+about them.
+During the night, I was trying to compile and config FVWM3. Compilation was super easy, configuration was not. I was able to achieve some
+things, but then I realized that all I wanted to create was another ratpoison, so I went back to ratpoison :-D
+Added some new key bindings to it, so that might help using it on this poor laptop with more ease.
+
 * *Contacts*
 
 Electronic mail: pkotrcka (at) vivaldi (dot) net
 
 Mastodon: @peterkotrcka@nrw.social
 
-*Modified - February 20, 2023* - last mod: Contacts + blog
+*Modified - February 25, 2023* - last mod: blog
