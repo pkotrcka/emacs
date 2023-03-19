@@ -350,10 +350,24 @@ During the night, I was trying to compile and config FVWM3. Compilation was supe
 things, but then I realized that all I wanted to create was another ratpoison, so I went back to ratpoison :-D
 Added some new key bindings to it, so that might help using it on this poor laptop with more ease.
 
+*** *March 5*
+
+Not that much happening right now as I am stuck at work. I did manage to do a German visit early in the month, so now I can plan my future
+trips much better. My new colleaue might take all those night shifts, so there is a slight chance of me being a daily guy again :-D
+But of course, I am trying to be realistic about it and wait for the actual result.
+
+*** *March 15*
+
+I have changed my emacs theme to ef-themes (by Prot) in the Autumn colors, pretty nice and warm tones, earthy. Pleasant to look at.
+
+*** *March 19*
+
+I made a lot of videos about Emacs. Not sure if that will be something regular, but so far - I like doing that.
+
 * *Contacts*
 
 Electronic mail: pkotrcka (at) vivaldi (dot) net
 
 Mastodon: @peterkotrcka@nrw.social
 
-*Modified - February 25, 2023* - last mod: blog
+*Modified - March 19, 2023* - last mod: blog
