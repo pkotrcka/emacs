@@ -6,10 +6,7 @@
      "https://ilyess.cc/posts/index.xml" 
      "https://vkc.sh/feed/" 
      "https://bbbhltz.codeberg.page/rss.xml" 
-     "https://hunden.linuxkompis.se/feed.xml" 
      "https://alexschroeder.ch/wiki/feed/full" 
-     "https://www.fosskers.ca/en/rss" 
-     "https://chinahistorypodcast.libsyn.com/rss" 
      "http://jirka.1-2-8.net/blog-rss.xml" 
      "https://mdhughes.tech/feed/" 
      "https://nullprogram.com/feed/" 
@@ -17,10 +14,6 @@
      "https://rubenerd.com/feed/" 
      "https://videos.lukesmith.xyz/feeds/videos.xml?sort=-publishedAt" 
      "https://www.dragonflydigest.com/feed" 
-     "https://video.hardlimit.com/feeds/videos.xml?videoChannelId=39" 
-     "https://reddit.com/r/hylang.rss" 
-     "https://share.tube/feeds/videos.xml?videoChannelId=656" 
-     "https://protesilaos.com/master.xml" 
      "https://dataswamp.org/~solene/rss.xml" 
      "http://sachachua.com/blog/feed"))
  '(erc-nick "kotrcka")
