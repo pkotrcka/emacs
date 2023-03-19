@@ -1,53 +1,3 @@
-;; Use a minimal cursor
-(setq default-cursor-type 'hbar)
-
-;; Don't use messages that you don't read
-(setq initial-scratch-message "")
-(setq inhibit-startup-message t)
-
-;; Don't let Emacs hurt your ears
-(setq visible-bell t)
-
-;; no distractions
-(toggle-scroll-bar -1)
-
-;; start maximized
-
-(toggle-frame-maximized)
-
-;; parens pairs
-(show-paren-mode 1)
-(setq show-paren-delay 0)
-
-;; windmove
-
-(when (fboundp 'windmove-default-keybindings)
-  (windmove-default-keybindings))
-
-;; melpa
-
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-
-;; list of packages to install
-
-(setq package-selected-packages '(ef-themes sudo-edit eww-lnum org-preview-html elpher elfeed elfeed-goodies undo-tree image-dired+))
-
-(package-initialize)
-;; install selected packages
-(unless package-archive-contents
-  (package-refresh-contents))
-
-(package-install-selected-packages)
-
-;; undo tree
-
-(global-undo-tree-mode)
-
-;; pulsar
-
-(require 'pulsar)
-
 ;; custom variables
 
 (custom-set-variables
@@ -82,12 +32,60 @@
  '(menu-bar-mode nil)
  '(org-html-validation-link "" t)
  '(package-selected-packages
-   '(ef-themes sudo-edit vterm eww-lnum org-preview-html elpher elfeed elfeed-goodies undo-tree pulsar image-dired+))
+   '(ef-themes sudo-edit vterm eww-lnum org-preview-html elpher elfeed elfeed-goodies undo-tree image-dired+))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(delete-selection-mode t)
  '(undo-tree-visualizer-diff t)
  '(undo-tree-visualizer-relative-timestamps t))
+
+;; melpa
+
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+
+;; install packages 
+
+(package-initialize)
+(unless package-archive-contents
+  (package-refresh-contents))
+(package-install-selected-packages)
+
+
+;; Use a minimal cursor
+(setq default-cursor-type 'hbar)
+
+;; Don't use messages that you don't read
+(setq initial-scratch-message "")
+(setq inhibit-startup-message t)
+
+;; Don't let Emacs hurt your ears
+(setq visible-bell t)
+
+;; no distractions
+(toggle-scroll-bar -1)
+
+;; start maximized
+
+(toggle-frame-maximized)
+
+;; parens pairs
+(show-paren-mode 1)
+(setq show-paren-delay 0)
+
+;; windmove
+
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
+
+;; undo tree
+
+(global-undo-tree-mode)
+
+;; pulsar
+
+(require 'pulsar)
+
 
 ;; set custom face for minibuffer
 
