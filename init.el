@@ -1,6 +1,6 @@
 ;; custom variables
 (custom-set-variables
- '(custom-enabled-themes '(wombat))
+ '(custom-enabled-themes '(leuven))
  '(elfeed-feeds
    '("https://ag91.github.io/rss.xml" 
      "https://ilyess.cc/posts/index.xml" 
