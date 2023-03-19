@@ -31,7 +31,7 @@
 
 ;; list of packages to install
 
-(setq package-selected-packages '(ef-themes sudo-edit eww-lnum org-preview-html elpher elfeed elfeed-goodies undo-tree pulsar image-dired+))
+(setq package-selected-packages '(ef-themes sudo-edit eww-lnum org-preview-html elpher elfeed elfeed-goodies undo-tree image-dired+))
 
 (package-initialize)
 ;; install selected packages
@@ -87,27 +87,7 @@
  '(tool-bar-mode nil)
  '(delete-selection-mode t)
  '(undo-tree-visualizer-diff t)
- '(undo-tree-visualizer-relative-timestamps t)
- '(pulsar-pulse-functions
-  '(recenter-top-bottom
-    windmove-left
-    windmove-right
-    windmove-up
-    windmove-down
-    other-window
-    scroll-down-command
-    scroll-up-command
-    isearch-repeat-forward
-    isearch-repeat-backward
-    recenter-top-bottom
-    move-to-window-line-top-bottom
-    reposition-window
-    bookmark-jump
-    other-window
-    delete-window
-    delete-other-windows
-    forward-page
-    backward-page))
+ '(undo-tree-visualizer-relative-timestamps t))
 
 ;; set custom face for minibuffer
 
@@ -156,16 +136,6 @@
 ;; wrapping
 
 (global-set-key (kbd "<f5>") 'toggle-truncate-lines)
-
-;; pulsar 
- 
-(setq pulsar-pulse t)
-(setq pulsar-delay 0.055)
-(setq pulsar-iterations 10)
-(setq pulsar-face 'pulsar-cyan)
-(setq pulsar-highlight-face 'pulsar-yellow)
-
-(pulsar-global-mode 1)
 
 ;; macro for http
 
