@@ -52,22 +52,14 @@
 (package-install-selected-packages)
 
 
-;; Use a minimal cursor
-(setq default-cursor-type 'hbar)
-
-;; Don't use messages that you don't read
-(setq initial-scratch-message "")
+;; UI settings
+(setq default-cursor-type 'hbar) ;Use a minimal cursor
+(setq initial-scratch-message "") ; Don't use messages that you don't read
 (setq inhibit-startup-message t)
+(setq visible-bell t) ; Don't let Emacs hurt your ears
+(toggle-scroll-bar -1) ; no distractions
+(toggle-frame-maximized) ; start maximized
 
-;; Don't let Emacs hurt your ears
-(setq visible-bell t)
-
-;; no distractions
-(toggle-scroll-bar -1)
-
-;; start maximized
-
-(toggle-frame-maximized)
 
 ;; parens pairs
 (show-paren-mode 1)
@@ -82,18 +74,9 @@
 
 (global-undo-tree-mode)
 
-;; pulsar
-
-(require 'pulsar)
-
-
 ;; set custom face for minibuffer
 
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  '(default ((t (:family "IBM Plex Mono" :foundry "IBM " :slant normal :weight normal :height 98 :width normal))))
  '(minibuffer-prompt ((t (:foreground "dark blue" :height 220 :family "IBM Plex Mono")))))
 
@@ -113,29 +96,16 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (global-set-key (kbd "C-x w") 'elfeed)
 (global-set-key (kbd "C-c se") 'sudo-edit)
-
-;; window resize
-
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
 (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 (global-set-key (kbd "C-c v m") 'visual-line-mode)
-
-;; beg and end of buffer, because the default binding does not work with sk layout on every kbd
 (global-set-key (kbd "C-c b b") 'beginning-of-buffer)
 (global-set-key (kbd "C-c e b") 'end-of-buffer)
-
-;; splits
-
-(global-set-key (kbd "C-s-<right>") 'split-window-horizontally)
-(global-set-key (kbd "C-s-<down>") 'split-window-vertically)
-
-;; wrapping
-
 (global-set-key (kbd "<f5>") 'toggle-truncate-lines)
 
-;; macro for http
+;; function for http
 
 (defun httpgo ()
   (interactive)
@@ -143,7 +113,7 @@
 
 (global-set-key (kbd "C-c hh") 'httpgo)
 
-;; macro for perl code in orgmode
+;; function for perl code in orgmode
 
 (defun perlins ()
   (interactive)
