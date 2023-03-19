@@ -24,7 +24,7 @@
  '(menu-bar-mode nil)
  '(org-html-validation-link "" t)
  '(package-selected-packages
-   '(sudo-edit eww-lnum org-preview-html elpher elfeed elfeed-goodies undo-tree image-dired+))
+   '(sudo-edit eww-lnum elpher elfeed elfeed-goodies undo-tree image-dired+))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(delete-selection-mode t)
