@@ -54,7 +54,7 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
-(setq package-selected-packages '(sudo-edit eww-lnum org-preview-html elpher elfeed elfeed-goodies undo-tree pulsar image-dired+))
+(setq package-selected-packages '(ef-themes sudo-edit eww-lnum org-preview-html elpher elfeed elfeed-goodies undo-tree pulsar image-dired+))
 
 (package-initialize)
 ;; install selected packages
@@ -78,7 +78,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(modus-vivendi))
+ '(custom-enabled-themes '(ef-autumn))
  '(elfeed-feeds
    '("https://ag91.github.io/rss.xml" "https://ilyess.cc/posts/index.xml" "https://vkc.sh/feed/" "https://bbbhltz.codeberg.page/rss.xml" "https://hunden.linuxkompis.se/feed.xml" "https://alexschroeder.ch/wiki/feed/full" "https://www.fosskers.ca/en/rss" "https://chinahistorypodcast.libsyn.com/rss" "http://jirka.1-2-8.net/blog-rss.xml" "https://mdhughes.tech/feed/" "https://nullprogram.com/feed/" "https://iridiumbrowser.de/feed.xml" "https://rubenerd.com/feed/" "https://videos.lukesmith.xyz/feeds/videos.xml?sort=-publishedAt" "https://www.dragonflydigest.com/feed" "https://video.hardlimit.com/feeds/videos.xml?videoChannelId=39" "https://reddit.com/r/hylang.rss" "https://share.tube/feeds/videos.xml?videoChannelId=656" "https://protesilaos.com/master.xml" "https://dataswamp.org/~solene/rss.xml" "http://sachachua.com/blog/feed"))
  '(erc-nick "kotrcka")
@@ -89,7 +89,7 @@
  '(menu-bar-mode nil)
  '(org-html-validation-link "" t)
  '(package-selected-packages
-   '(sudo-edit vterm eww-lnum org-preview-html elpher elfeed elfeed-goodies undo-tree pulsar image-dired+))
+   '(ef-themes sudo-edit vterm eww-lnum org-preview-html elpher elfeed elfeed-goodies undo-tree pulsar image-dired+))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(undo-tree-visualizer-diff t)
