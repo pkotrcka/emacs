@@ -43,7 +43,6 @@
   (package-refresh-contents))
 (package-install-selected-packages)
 
-
 ;; UI settings
 (setq default-cursor-type 'hbar) ;Use a minimal cursor
 (setq initial-scratch-message "") ; Don't use messages that you don't read
@@ -51,7 +50,6 @@
 (setq visible-bell t) ; Don't let Emacs hurt your ears
 (toggle-scroll-bar -1) ; no distractions
 (toggle-frame-maximized) ; start maximized
-(setq warning-minimum level :error) ;only warn on errors
 
 ;; parens pairs
 (show-paren-mode 1)
@@ -95,5 +93,4 @@
 (defun httpgo ()
   (interactive)
   (search-forward "http"))
-
 (global-set-key (kbd "C-c hh") 'httpgo)
