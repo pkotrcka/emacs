@@ -1,7 +1,6 @@
 ;; custom variables
-
 (custom-set-variables
- '(custom-enabled-themes '(leuven))
+ '(custom-enabled-themes '(wombat))
  '(elfeed-feeds
    '("https://ag91.github.io/rss.xml" 
      "https://ilyess.cc/posts/index.xml" 
@@ -32,7 +31,7 @@
  '(menu-bar-mode nil)
  '(org-html-validation-link "" t)
  '(package-selected-packages
-   '(sudo-edit vterm eww-lnum org-preview-html elpher elfeed elfeed-goodies undo-tree image-dired+))
+   '(sudo-edit eww-lnum org-preview-html elpher elfeed elfeed-goodies undo-tree image-dired+))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(delete-selection-mode t)
@@ -60,28 +59,23 @@
 (toggle-scroll-bar -1) ; no distractions
 (toggle-frame-maximized) ; start maximized
 
-
 ;; parens pairs
 (show-paren-mode 1)
 (setq show-paren-delay 0)
 
 ;; windmove
-
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
 
 ;; undo tree
-
 (global-undo-tree-mode)
 
 ;; set custom face for minibuffer
-
 (custom-set-faces
  '(default ((t (:family "IBM Plex Mono" :foundry "IBM " :slant normal :weight normal :height 98 :width normal))))
  '(minibuffer-prompt ((t (:foreground "dark blue" :height 220 :family "IBM Plex Mono")))))
 
 ;; eww settings
-
 (setq
  browse-url-browser-function 'eww-browse-url ; Use eww as the default browser
  shr-use-fonts  nil                          ; No special fonts
@@ -91,7 +85,6 @@
  eww-search-prefix "https://www.mojeek.com/search?hp=minimal&q=") ; Use Mojeek Minimal for search (default)
 
 ;; OTHER KEYBINDINGS
-
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (global-set-key (kbd "C-x w") 'elfeed)
 (global-set-key (kbd "C-c se") 'sudo-edit)
@@ -105,7 +98,6 @@
 (global-set-key (kbd "<f5>") 'toggle-truncate-lines)
 
 ;; function for http
-
 (defun httpgo ()
   (interactive)
   (search-forward "http"))
