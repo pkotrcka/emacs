@@ -1,7 +1,7 @@
 ;; custom variables
 
 (custom-set-variables
- '(custom-enabled-themes '(ef-autumn))
+ '(custom-enabled-themes '(leuven))
  '(elfeed-feeds
    '("https://ag91.github.io/rss.xml" 
      "https://ilyess.cc/posts/index.xml" 
@@ -32,7 +32,7 @@
  '(menu-bar-mode nil)
  '(org-html-validation-link "" t)
  '(package-selected-packages
-   '(ef-themes sudo-edit vterm eww-lnum org-preview-html elpher elfeed elfeed-goodies undo-tree image-dired+))
+   '(sudo-edit vterm eww-lnum org-preview-html elpher elfeed elfeed-goodies undo-tree image-dired+))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(delete-selection-mode t)
@@ -92,7 +92,6 @@
 
 ;; OTHER KEYBINDINGS
 
-(global-set-key (kbd "C-x C-S-b") 'ibuffer-other-window)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (global-set-key (kbd "C-x w") 'elfeed)
 (global-set-key (kbd "C-c se") 'sudo-edit)
@@ -112,11 +111,3 @@
   (search-forward "http"))
 
 (global-set-key (kbd "C-c hh") 'httpgo)
-
-;; function for perl code in orgmode
-
-(defun perlins ()
-  (interactive)
-  (insert "#+BEGIN_SRC perl \n\n#+END_SRC")
-  (previous-line)
-  (move-beginning-of-line))
