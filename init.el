@@ -58,6 +58,7 @@
 (setq visible-bell t) ; Don't let Emacs hurt your ears
 (toggle-scroll-bar -1) ; no distractions
 (toggle-frame-maximized) ; start maximized
+(setq warning-minimum level :error) ;only warn on errors
 
 ;; parens pairs
 (show-paren-mode 1)
